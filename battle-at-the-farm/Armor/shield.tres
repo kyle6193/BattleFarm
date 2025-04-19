@@ -1,0 +1,14 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://ug7edu0oqqny"]
+
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="1_01s4o"]
+
+[resource]
+script = ExtResource("1_01s4o")
+name = ""
+saving_throw = 6
+move_penalty = 0.0
+technical_lvl = 4
+special_effects = "Provides a degree of protection from the user's front. Offers no protection against \"area\" type  attacks or attacks from the side or rear. 
+Can combined with any other armor, thus making the saving throw 5+.
+A model holding a shield cannot use the hand that's holding the shield for anything else. Also, can only use pistol type weapons in the second hand (which is not holding the shield). 
+Can be slung on the back to free both hands, but consequently confer a movement penalty of 0.5. "

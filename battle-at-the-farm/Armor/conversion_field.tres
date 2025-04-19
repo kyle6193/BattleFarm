@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://cimn2f3fnglir"]
+
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="1_l38e4"]
+
+[resource]
+script = ExtResource("1_l38e4")
+name = ""
+saving_throw = 4
+move_penalty = 0.0
+technical_lvl = 6
+special_effects = "Energy field that converts all energy to light, including combat and shooting damage. A successful save causes a flash of light across a circular area with a radius equal to the Strength Characteristic of the attacker/weapon in inches. Within this area troops are blinded on a roll of 4+ unless wearing some kind of eye protection. This does not affect the wearer of the conversion field."

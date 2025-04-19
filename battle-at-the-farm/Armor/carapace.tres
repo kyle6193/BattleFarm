@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://4x4hs0itsano"]
+
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="1_vlwcl"]
+
+[resource]
+script = ExtResource("1_vlwcl")
+name = ""
+saving_throw = 4
+move_penalty = 1.0
+technical_lvl = 5
+special_effects = "Air-sealed. When combined with a respirator it protects the user from gas weapons."

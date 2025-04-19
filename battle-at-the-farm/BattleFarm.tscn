@@ -1,0 +1,206 @@
+[gd_scene load_steps=27 format=3 uid="uid://cm4as81rv2dbq"]
+
+[ext_resource type="Texture2D" uid="uid://cv7g15hqypm1n" path="res://Marines/cantor.png" id="1_a8wu0"]
+[ext_resource type="Script" path="res://game_manager.gd" id="1_e2k28"]
+[ext_resource type="PackedScene" uid="uid://3rp4fe4q0sm4" path="res://Marines/sergeant.tscn" id="2_ewlyr"]
+[ext_resource type="Script" path="res://Orks/hruk.gd" id="3_g3idh"]
+[ext_resource type="Texture2D" uid="uid://bpcbp4rid68i2" path="res://Marines/marine-missile.png" id="3_sr7eg"]
+[ext_resource type="Script" path="res://Marines/cantor.gd" id="4_r8l3k"]
+[ext_resource type="PackedScene" uid="uid://pe80dqm0j2y3" path="res://Marines/marine.tscn" id="4_wqq5q"]
+[ext_resource type="PackedScene" uid="uid://bukpn4rds0rlr" path="res://Orks/ork.tscn" id="5_apvm7"]
+[ext_resource type="Script" path="res://Orks/thrugg.gd" id="5_txyqc"]
+[ext_resource type="Texture2D" uid="uid://dac7ukw2a7c56" path="res://Orks/thrugg.png" id="6_0oqf3"]
+[ext_resource type="PackedScene" uid="uid://crc08l8lgkk7g" path="res://Orks/ork_nob.tscn" id="6_fs7en"]
+[ext_resource type="Script" path="res://Marines/marine_missile.gd" id="6_lltfi"]
+[ext_resource type="Texture2D" uid="uid://dr7ywaw756chv" path="res://Orks/hruk.png" id="7_m7ytc"]
+[ext_resource type="Resource" uid="uid://cbm8cb86hmbf6" path="res://Armor/flak.tres" id="9_uu7n3"]
+[ext_resource type="Resource" uid="uid://d2hkchn7kaxwn" path="res://Weapons/power_glove.tres" id="10_ivy72"]
+[ext_resource type="Resource" uid="uid://dhlfcsogm8nyg" path="res://Weapons/missile_launcher.tres" id="11_lps6r"]
+[ext_resource type="Script" path="res://Weapons/Weapons.gd" id="12_hqiiy"]
+[ext_resource type="Resource" uid="uid://b5t0tbuflvecb" path="res://Weapons/plasma_pistol.tres" id="12_mf06h"]
+[ext_resource type="Resource" uid="uid://bmy1ke8qxdygh" path="res://Weapons/Knife_4.tres" id="13_0f7vx"]
+[ext_resource type="Resource" uid="uid://bjwcsgqhkyxek" path="res://Weapons/chainsword.tres" id="13_4yd2s"]
+[ext_resource type="Resource" uid="uid://d3kdhmtuedirc" path="res://Weapons/bolt_gun.tres" id="13_o5y3o"]
+[ext_resource type="Resource" uid="uid://bd85ioo0ad47x" path="res://Armor/refractor_field.tres" id="13_vypk3"]
+[ext_resource type="Resource" uid="uid://ct8h0c4osmric" path="res://Weapons/bolt_pistol.tres" id="14_srd22"]
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="15_funjn"]
+[ext_resource type="Resource" uid="uid://dsnbtoyem2p0q" path="res://Armor/powered_armor.tres" id="16_nt1c5"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]
+radius = 99.5
+
+[node name="Node2D" type="Node2D"]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="Ork Master" type="Node" parent="."]
+
+[node name="Ork" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-83, 222)
+
+[node name="Ork2" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-226, 222)
+
+[node name="Ork3" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-371, 222)
+
+[node name="Ork4" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-522, 222)
+
+[node name="Ork5" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-83, 377)
+
+[node name="Ork6" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-232, 385)
+
+[node name="Ork7" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-381, 389)
+
+[node name="Ork8" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-528, 387)
+
+[node name="Ork9" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-83, 536)
+
+[node name="Ork10" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-236, 541)
+
+[node name="Ork11" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-391, 545)
+
+[node name="Ork12" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-538, 541)
+
+[node name="Ork13" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-83, 691)
+
+[node name="Ork14" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-236, 692)
+
+[node name="Ork15" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-391, 696)
+
+[node name="Ork16" parent="Ork Master" instance=ExtResource("5_apvm7")]
+position = Vector2(-536, 697)
+
+[node name="Ork Nob" parent="Ork Master" instance=ExtResource("6_fs7en")]
+position = Vector2(127, 222)
+
+[node name="Ork Nob2" parent="Ork Master" instance=ExtResource("6_fs7en")]
+position = Vector2(127, 377)
+
+[node name="Ork Nob3" parent="Ork Master" instance=ExtResource("6_fs7en")]
+position = Vector2(127, 533)
+
+[node name="Hruk" type="CharacterBody2D" parent="Ork Master" groups=["units"]]
+position = Vector2(322, 222)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("3_g3idh")
+equipped_weapons = Array[ExtResource("12_hqiiy")]([ExtResource("13_o5y3o"), ExtResource("14_srd22"), ExtResource("13_0f7vx")])
+equipped_armor = Array[ExtResource("15_funjn")]([ExtResource("9_uu7n3")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ork Master/Hruk"]
+z_index = 1
+position = Vector2(0.5, -1)
+shape = SubResource("CircleShape2D_l1lvd")
+
+[node name="hruk" type="Sprite2D" parent="Ork Master/Hruk"]
+texture = ExtResource("7_m7ytc")
+
+[node name="Thrugg" type="CharacterBody2D" parent="Ork Master" groups=["units"]]
+position = Vector2(522, 222)
+scale = Vector2(0.55, 0.55)
+script = ExtResource("5_txyqc")
+equipped_weapons = Array[ExtResource("12_hqiiy")]([ExtResource("14_srd22"), ExtResource("12_mf06h"), ExtResource("13_4yd2s")])
+equipped_armor = Array[ExtResource("15_funjn")]([ExtResource("9_uu7n3")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Ork Master/Thrugg"]
+z_index = 1
+position = Vector2(0.5, -1)
+shape = SubResource("CircleShape2D_l1lvd")
+
+[node name="thrugg" type="Sprite2D" parent="Ork Master/Thrugg"]
+texture = ExtResource("6_0oqf3")
+
+[node name="Marine Master" type="Node" parent="."]
+
+[node name="Cantor" type="CharacterBody2D" parent="Marine Master" groups=["units"]]
+position = Vector2(518, -220)
+scale = Vector2(0.55, 0.55)
+motion_mode = 1
+script = ExtResource("4_r8l3k")
+equipped_weapons = Array[ExtResource("12_hqiiy")]([ExtResource("14_srd22"), ExtResource("14_srd22"), ExtResource("10_ivy72")])
+equipped_armor = Array[ExtResource("15_funjn")]([ExtResource("16_nt1c5"), ExtResource("13_vypk3")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marine Master/Cantor"]
+z_index = 1
+position = Vector2(0.5, -1)
+shape = SubResource("CircleShape2D_l1lvd")
+
+[node name="cantor" type="Sprite2D" parent="Marine Master/Cantor"]
+texture = ExtResource("1_a8wu0")
+
+[node name="Sergeant" parent="Marine Master" groups=["units"] instance=ExtResource("2_ewlyr")]
+position = Vector2(321, -220)
+
+[node name="Sergeant2" parent="Marine Master" groups=["units"] instance=ExtResource("2_ewlyr")]
+position = Vector2(321, -362)
+
+[node name="Sergeant3" parent="Marine Master" groups=["units"] instance=ExtResource("2_ewlyr")]
+position = Vector2(321, -501)
+
+[node name="Marine Missile" type="CharacterBody2D" parent="Marine Master" groups=["units"]]
+position = Vector2(133, -220)
+scale = Vector2(0.55, 0.55)
+motion_mode = 1
+script = ExtResource("6_lltfi")
+equipped_weapons = Array[ExtResource("12_hqiiy")]([ExtResource("11_lps6r"), ExtResource("14_srd22"), ExtResource("13_0f7vx")])
+equipped_armor = Array[ExtResource("15_funjn")]([ExtResource("16_nt1c5")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Marine Master/Marine Missile"]
+z_index = 1
+position = Vector2(0.5, -1)
+shape = SubResource("CircleShape2D_l1lvd")
+
+[node name="marine missile" type="Sprite2D" parent="Marine Master/Marine Missile"]
+texture = ExtResource("3_sr7eg")
+
+[node name="Marine" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-45, -220)
+
+[node name="Marine2" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-196, -220)
+
+[node name="Marine3" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-362, -220)
+
+[node name="Marine4" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-512, -222)
+
+[node name="Marine5" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-43, -369)
+
+[node name="Marine6" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-204, -373)
+
+[node name="Marine7" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-360, -371)
+
+[node name="Marine8" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-513, -374)
+
+[node name="Marine9" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-46, -521)
+
+[node name="Marine10" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-202, -521)
+
+[node name="Marine11" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+position = Vector2(-361, -521)
+
+[node name="GameManager" type="Node2D" parent="."]
+script = ExtResource("1_e2k28")
+
+[node name="MeasurementLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0

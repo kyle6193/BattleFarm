@@ -1,0 +1,19 @@
+[gd_resource type="Resource" script_class="Weapons" load_steps=2 format=3 uid="uid://dhlfcsogm8nyg"]
+
+[ext_resource type="Script" path="res://Weapons/Weapons.gd" id="1_yc5m0"]
+
+[resource]
+script = ExtResource("1_yc5m0")
+name = "Grav Missile Launcher"
+short_range = 20
+long_range = 72
+bonus_to_hit_short = 0
+bonus_to_hit_long = 0
+strength = 5
+damage = 1
+save_modifier = -2
+special_combat = false
+special_heavy = 1.0
+special_slow = true
+special_follow = false
+area = 1.5

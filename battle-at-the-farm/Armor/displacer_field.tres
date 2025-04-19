@@ -1,0 +1,13 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://1loapr8gd1sg"]
+
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="1_bh4dt"]
+
+[resource]
+script = ExtResource("1_bh4dt")
+name = ""
+saving_throw = 4
+move_penalty = 0.0
+technical_lvl = 6
+special_effects = "On a successful save the model is instantly transported D6 inches  in a random direction. This also causes a flash of light that will expose hidden troops much like how shooting would. 
+
+The saving throw should be taken separately from normal armor saves. It also happens first, before the normal armor save happens."

@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://cvli3w2x848bj"]
+
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="1_8n8y0"]
+
+[resource]
+script = ExtResource("1_8n8y0")
+name = ""
+saving_throw = 5
+move_penalty = 1.0
+technical_lvl = 5
+special_effects = ""

@@ -1,0 +1,9 @@
+[gd_resource type="Resource" script_class="Equipment" load_steps=2 format=3 uid="uid://cpsgb34rnj2jd"]
+
+[ext_resource type="Script" path="res://Equipment.gd" id="1_fm42k"]
+
+[resource]
+script = ExtResource("1_fm42k")
+name = "Communicator"
+description = "Small device to transmit and receive messages"
+mechanics = "A squad leader, Thrugg, or Hruk can attempt to use this to communicate back to base. Requires a roll of 6 to succeed."

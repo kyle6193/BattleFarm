@@ -1,0 +1,11 @@
+[gd_resource type="Resource" script_class="Armor" load_steps=2 format=3 uid="uid://bd85ioo0ad47x"]
+
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="1_uq3md"]
+
+[resource]
+script = ExtResource("1_uq3md")
+name = ""
+saving_throw = 5
+move_penalty = 0.0
+technical_lvl = 5
+special_effects = "Energy field that surrounds the user in a hazy band of light. This means it gives away the user's position just like shooting while hidden would. "

@@ -1,0 +1,29 @@
+[gd_scene load_steps=10 format=3 uid="uid://pe80dqm0j2y3"]
+
+[ext_resource type="Script" path="res://Marines/marine.gd" id="1_ke27i"]
+[ext_resource type="Texture2D" uid="uid://c2g2g6aki54cs" path="res://Marines/marine.png" id="1_wqhbi"]
+[ext_resource type="Script" path="res://Weapons/Weapons.gd" id="2_trfnq"]
+[ext_resource type="Resource" uid="uid://d3kdhmtuedirc" path="res://Weapons/bolt_gun.tres" id="3_urexb"]
+[ext_resource type="Resource" uid="uid://ct8h0c4osmric" path="res://Weapons/bolt_pistol.tres" id="4_fi6xx"]
+[ext_resource type="Resource" uid="uid://bmy1ke8qxdygh" path="res://Weapons/Knife_4.tres" id="5_yqfxw"]
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="6_6acw3"]
+[ext_resource type="Resource" uid="uid://dsnbtoyem2p0q" path="res://Armor/powered_armor.tres" id="7_dxopv"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]
+radius = 99.5
+
+[node name="Marine" type="CharacterBody2D"]
+position = Vector2(-489, -220)
+scale = Vector2(0.55, 0.55)
+motion_mode = 1
+script = ExtResource("1_ke27i")
+equipped_weapons = Array[ExtResource("2_trfnq")]([ExtResource("3_urexb"), ExtResource("4_fi6xx"), ExtResource("5_yqfxw")])
+equipped_armor = Array[ExtResource("6_6acw3")]([ExtResource("7_dxopv")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0.5, -1)
+shape = SubResource("CircleShape2D_l1lvd")
+
+[node name="marine" type="Sprite2D" parent="."]
+texture = ExtResource("1_wqhbi")

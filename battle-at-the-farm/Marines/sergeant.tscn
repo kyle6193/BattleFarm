@@ -1,0 +1,29 @@
+[gd_scene load_steps=10 format=3 uid="uid://3rp4fe4q0sm4"]
+
+[ext_resource type="Script" path="res://Marines/sergeant.gd" id="1_8ebfr"]
+[ext_resource type="Texture2D" uid="uid://duv5uckkstl24" path="res://Marines/sergeant.png" id="1_cd6ji"]
+[ext_resource type="Script" path="res://Weapons/Weapons.gd" id="2_nlr7n"]
+[ext_resource type="Resource" uid="uid://d3kdhmtuedirc" path="res://Weapons/bolt_gun.tres" id="3_kj13p"]
+[ext_resource type="Resource" uid="uid://ct8h0c4osmric" path="res://Weapons/bolt_pistol.tres" id="4_vaqnq"]
+[ext_resource type="Resource" uid="uid://bmy1ke8qxdygh" path="res://Weapons/Knife_4.tres" id="5_i8qnx"]
+[ext_resource type="Script" path="res://Armor/Armor.gd" id="6_kaigu"]
+[ext_resource type="Resource" uid="uid://dsnbtoyem2p0q" path="res://Armor/powered_armor.tres" id="7_ykbtg"]
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]
+radius = 99.5
+
+[node name="Sergeant" type="CharacterBody2D"]
+position = Vector2(155, -220)
+scale = Vector2(0.55, 0.55)
+motion_mode = 1
+script = ExtResource("1_8ebfr")
+equipped_weapons = Array[ExtResource("2_nlr7n")]([ExtResource("3_kj13p"), ExtResource("4_vaqnq"), ExtResource("5_i8qnx")])
+equipped_armor = Array[ExtResource("6_kaigu")]([ExtResource("7_ykbtg")])
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+z_index = 1
+position = Vector2(0.5, -1)
+shape = SubResource("CircleShape2D_l1lvd")
+
+[node name="sergeant" type="Sprite2D" parent="."]
+texture = ExtResource("1_cd6ji")
