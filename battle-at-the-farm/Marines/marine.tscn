@@ -1,12 +1,12 @@
 [gd_scene load_steps=10 format=3 uid="uid://pe80dqm0j2y3"]
 
-[ext_resource type="Script" path="res://Marines/marine.gd" id="1_ke27i"]
+[ext_resource type="Script" uid="uid://b5hb8rfl4fxb1" path="res://Marines/marine.gd" id="1_ke27i"]
 [ext_resource type="Texture2D" uid="uid://c2g2g6aki54cs" path="res://Marines/marine.png" id="1_wqhbi"]
-[ext_resource type="Script" path="res://Weapons/Weapons.gd" id="2_trfnq"]
+[ext_resource type="Script" uid="uid://dn4osqavw316m" path="res://Weapons/Weapons.gd" id="2_trfnq"]
 [ext_resource type="Resource" uid="uid://d3kdhmtuedirc" path="res://Weapons/bolt_gun.tres" id="3_urexb"]
 [ext_resource type="Resource" uid="uid://ct8h0c4osmric" path="res://Weapons/bolt_pistol.tres" id="4_fi6xx"]
 [ext_resource type="Resource" uid="uid://bmy1ke8qxdygh" path="res://Weapons/Knife_4.tres" id="5_yqfxw"]
-[ext_resource type="Script" path="res://Armor/Armor.gd" id="6_6acw3"]
+[ext_resource type="Script" uid="uid://tp64rdn30p42" path="res://Armor/Armor.gd" id="6_6acw3"]
 [ext_resource type="Resource" uid="uid://dsnbtoyem2p0q" path="res://Armor/powered_armor.tres" id="7_dxopv"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]

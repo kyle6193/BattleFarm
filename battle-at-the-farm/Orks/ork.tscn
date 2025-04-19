@@ -1,11 +1,11 @@
 [gd_scene load_steps=9 format=3 uid="uid://bukpn4rds0rlr"]
 
 [ext_resource type="Texture2D" uid="uid://c2qwy1ga011k8" path="res://Orks/ork.png" id="1_7phso"]
-[ext_resource type="Script" path="res://Orks/ork.gd" id="1_sxjqq"]
-[ext_resource type="Script" path="res://Weapons/Weapons.gd" id="2_xmv56"]
+[ext_resource type="Script" uid="uid://cjqkn8mbuixf0" path="res://Orks/ork.gd" id="1_sxjqq"]
+[ext_resource type="Script" uid="uid://dn4osqavw316m" path="res://Weapons/Weapons.gd" id="2_xmv56"]
 [ext_resource type="Resource" uid="uid://d3kdhmtuedirc" path="res://Weapons/bolt_gun.tres" id="3_ayn2t"]
 [ext_resource type="Resource" uid="uid://cgt6t3meocnql" path="res://Weapons/Knife_3.tres" id="4_icdj6"]
-[ext_resource type="Script" path="res://Armor/Armor.gd" id="5_7t5i5"]
+[ext_resource type="Script" uid="uid://tp64rdn30p42" path="res://Armor/Armor.gd" id="5_7t5i5"]
 [ext_resource type="Resource" uid="uid://cbm8cb86hmbf6" path="res://Armor/flak.tres" id="6_y0kak"]
 
 [sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]
