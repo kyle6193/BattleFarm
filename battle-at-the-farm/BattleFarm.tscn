@@ -1,4 +1,4 @@
-[gd_scene load_steps=27 format=3 uid="uid://cm4as81rv2dbq"]
+[gd_scene load_steps=26 format=3 uid="uid://cm4as81rv2dbq"]
 
 [ext_resource type="Texture2D" uid="uid://cv7g15hqypm1n" path="res://Marines/cantor.png" id="1_a8wu0"]
 [ext_resource type="Script" uid="uid://3v7ly0xpbnnr" path="res://game_manager.gd" id="1_e2k28"]
@@ -20,7 +20,6 @@
 [ext_resource type="Resource" uid="uid://b5t0tbuflvecb" path="res://Weapons/plasma_pistol.tres" id="12_mf06h"]
 [ext_resource type="Resource" uid="uid://bmy1ke8qxdygh" path="res://Weapons/Knife_4.tres" id="13_0f7vx"]
 [ext_resource type="Resource" uid="uid://bjwcsgqhkyxek" path="res://Weapons/chainsword.tres" id="13_4yd2s"]
-[ext_resource type="Resource" uid="uid://d3kdhmtuedirc" path="res://Weapons/bolt_gun.tres" id="13_o5y3o"]
 [ext_resource type="Resource" uid="uid://bd85ioo0ad47x" path="res://Armor/refractor_field.tres" id="13_vypk3"]
 [ext_resource type="Resource" uid="uid://ct8h0c4osmric" path="res://Weapons/bolt_pistol.tres" id="14_srd22"]
 [ext_resource type="Script" uid="uid://tp64rdn30p42" path="res://Armor/Armor.gd" id="15_funjn"]
@@ -96,8 +95,6 @@ position = Vector2(127, 533)
 position = Vector2(322, 222)
 scale = Vector2(0.55, 0.55)
 script = ExtResource("3_g3idh")
-equipped_weapons = Array[ExtResource("12_hqiiy")]([ExtResource("13_o5y3o"), ExtResource("14_srd22"), ExtResource("13_0f7vx")])
-equipped_armor = Array[ExtResource("15_funjn")]([ExtResource("9_uu7n3")])
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="Ork Master/Hruk"]
 z_index = 1

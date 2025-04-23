@@ -9,5 +9,8 @@ var stats := [4, 5, 5, 4, 3, 1, 5, 1, 8, 8, 8, 8]
 func get_stat(stat_index: int) -> int:
 	return stats[stat_index]
 	
+func get_movement_range() -> float:
+	return stats[Stat.M] * 100  # Assuming 100 pixels = 1 inch scale
+
 func _ready():
 	pass

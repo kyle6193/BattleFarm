@@ -64,6 +64,15 @@ func _unhandled_input(event):
 			# Update preview circle position
 			preview_circle.global_position = target_position
 			
+			 # Calculate movement range based on stats
+			if selected_model.has_method("get_movement_range"): # Check if the method exists
+				var max_distance = selected_model.get_movement_range() 
+				# Check if the motion exceeds the max distance
+				# If the motion exceeds the max distance, normalize it
+				# and scale it down to the max distance
+				if motion.length() > max_distance: 
+					motion = motion.normalized() * max_distance 
+
 			# Use test_move to check for collisions
 			var collision = selected_model.move_and_collide(motion, true)
 			
@@ -79,7 +88,7 @@ func _unhandled_input(event):
 					distance_label.text = ""
 			else:
 				# No collision - move all the way
-				selected_model.global_position = target_position
+				selected_model.global_position = selected_model.global_position + motion
 			
 			# Hide preview after moving
 			preview_circle.visible = false

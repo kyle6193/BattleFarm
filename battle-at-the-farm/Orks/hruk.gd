@@ -11,3 +11,7 @@ func get_stat(stat_index: int) -> int:
 	
 func _ready():
 	pass
+
+# Add this function to get movement range
+func get_movement_range() -> float:
+	return stats[Stat.M] * 100  # Assuming 100 pixels = 1 inch scale
