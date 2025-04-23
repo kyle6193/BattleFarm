@@ -87,7 +87,7 @@ func _unhandled_input(event):
 			if distance_label:
 				distance_label.text = ""
 
-func _process(delta):
+func _process(_delta):
 	if selected_model and distance_label:
 		var model_position = selected_model.global_position
 		var mouse_position = get_global_mouse_position()
