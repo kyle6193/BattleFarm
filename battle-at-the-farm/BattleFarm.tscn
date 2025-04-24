@@ -91,7 +91,7 @@ position = Vector2(127, 377)
 [node name="Ork Nob3" parent="Ork Master" instance=ExtResource("6_fs7en")]
 position = Vector2(127, 533)
 
-[node name="Hruk" type="CharacterBody2D" parent="Ork Master" groups=["units"]]
+[node name="Hruk" type="CharacterBody2D" parent="Ork Master" groups=["orks", "units"]]
 position = Vector2(322, 222)
 scale = Vector2(0.55, 0.55)
 script = ExtResource("3_g3idh")
@@ -104,7 +104,7 @@ shape = SubResource("CircleShape2D_l1lvd")
 [node name="hruk" type="Sprite2D" parent="Ork Master/Hruk"]
 texture = ExtResource("7_m7ytc")
 
-[node name="Thrugg" type="CharacterBody2D" parent="Ork Master" groups=["units"]]
+[node name="Thrugg" type="CharacterBody2D" parent="Ork Master" groups=["orks", "units"]]
 position = Vector2(522, 222)
 scale = Vector2(0.55, 0.55)
 script = ExtResource("5_txyqc")
@@ -121,7 +121,7 @@ texture = ExtResource("6_0oqf3")
 
 [node name="Marine Master" type="Node" parent="."]
 
-[node name="Cantor" type="CharacterBody2D" parent="Marine Master" groups=["units"]]
+[node name="Cantor" type="CharacterBody2D" parent="Marine Master" groups=["marines", "units"]]
 position = Vector2(518, -220)
 scale = Vector2(0.55, 0.55)
 motion_mode = 1
@@ -137,16 +137,16 @@ shape = SubResource("CircleShape2D_l1lvd")
 [node name="cantor" type="Sprite2D" parent="Marine Master/Cantor"]
 texture = ExtResource("1_a8wu0")
 
-[node name="Sergeant" parent="Marine Master" groups=["units"] instance=ExtResource("2_ewlyr")]
+[node name="Sergeant" parent="Marine Master" instance=ExtResource("2_ewlyr")]
 position = Vector2(321, -220)
 
-[node name="Sergeant2" parent="Marine Master" groups=["units"] instance=ExtResource("2_ewlyr")]
+[node name="Sergeant2" parent="Marine Master" instance=ExtResource("2_ewlyr")]
 position = Vector2(321, -362)
 
-[node name="Sergeant3" parent="Marine Master" groups=["units"] instance=ExtResource("2_ewlyr")]
+[node name="Sergeant3" parent="Marine Master" instance=ExtResource("2_ewlyr")]
 position = Vector2(321, -501)
 
-[node name="Marine Missile" type="CharacterBody2D" parent="Marine Master" groups=["units"]]
+[node name="Marine Missile" type="CharacterBody2D" parent="Marine Master" groups=["marines", "units"]]
 position = Vector2(133, -220)
 scale = Vector2(0.55, 0.55)
 motion_mode = 1
@@ -162,37 +162,37 @@ shape = SubResource("CircleShape2D_l1lvd")
 [node name="marine missile" type="Sprite2D" parent="Marine Master/Marine Missile"]
 texture = ExtResource("3_sr7eg")
 
-[node name="Marine" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-45, -220)
 
-[node name="Marine2" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine2" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-196, -220)
 
-[node name="Marine3" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine3" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-362, -220)
 
-[node name="Marine4" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine4" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-512, -222)
 
-[node name="Marine5" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine5" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-43, -369)
 
-[node name="Marine6" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine6" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-204, -373)
 
-[node name="Marine7" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine7" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-360, -371)
 
-[node name="Marine8" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine8" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-513, -374)
 
-[node name="Marine9" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine9" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-46, -521)
 
-[node name="Marine10" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine10" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-202, -521)
 
-[node name="Marine11" parent="Marine Master" groups=["units"] instance=ExtResource("4_wqq5q")]
+[node name="Marine11" parent="Marine Master" instance=ExtResource("4_wqq5q")]
 position = Vector2(-361, -521)
 
 [node name="GameManager" type="Node2D" parent="."]

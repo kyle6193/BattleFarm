@@ -11,7 +11,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]
 radius = 99.5
 
-[node name="Ork Nob" type="CharacterBody2D" groups=["units"]]
+[node name="Ork Nob" type="CharacterBody2D" groups=["orks", "units"]]
 position = Vector2(-164, 222)
 scale = Vector2(0.55, 0.55)
 script = ExtResource("1_hxnes")

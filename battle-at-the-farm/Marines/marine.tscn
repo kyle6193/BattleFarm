@@ -12,7 +12,7 @@
 [sub_resource type="CircleShape2D" id="CircleShape2D_l1lvd"]
 radius = 99.5
 
-[node name="Marine" type="CharacterBody2D"]
+[node name="Marine" type="CharacterBody2D" groups=["marines", "units"]]
 position = Vector2(-489, -220)
 scale = Vector2(0.55, 0.55)
 motion_mode = 1
