@@ -5,6 +5,8 @@ var selected_model: CharacterBody2D = null
 var distance_label: Label = null
 var preview_circle: Sprite2D = null
 var collider_radius: float = 0.0
+var friendly_group: String  = ""
+
 
 func _ready():
 	# Called when the node is added to the scene. Sets up the UI elements.
@@ -65,40 +67,61 @@ func _unhandled_input(event):
 
 		elif event.button_index == MOUSE_BUTTON_RIGHT and selected_model:
 			# Right mouse button pressed: move the selected model.
-
-			# Calculate the target position and motion vector.
 			var target_position = get_global_mouse_position()
 			var motion = target_position - selected_model.global_position
-
-			# Calculate movement range based on stats.
 			if selected_model.has_method("get_movement_range"):
-				# Check if the selected model has a movement range method.
-				var max_distance = selected_model.get_movement_range()  # Get the maximum movement range.
-
-				# Restrict motion to the maximum distance if exceeded.
+				var max_distance = selected_model.get_movement_range()
 				if motion.length() > max_distance:
 					motion = motion.normalized() * max_distance
 
-			preview_circle.global_position = selected_model.global_position + motion  # Update preview circle position.
+			# Determine friendly group(s)
+			if selected_model.is_in_group("orks"):
+				friendly_group = "orks"
+			elif selected_model.is_in_group("marines"):
+				friendly_group = "marines"
 
-			# Use test_move to check for collisions before moving.
-			var collision = selected_model.move_and_collide(motion, true)
+			var all_units = get_tree().get_nodes_in_group("units")
+			var friendlies = []
+			for unit in all_units:
+				if unit != selected_model and friendly_group != "" and unit.is_in_group(friendly_group):
+					unit.set_collision_layer(0)
+					unit.set_collision_mask(0)
+					friendlies.append(unit)
 
-			if collision:
-				# Collision detected: move up to the collision point.
-				var safe_position = selected_model.global_position + motion.normalized() * (motion.length() - collision.get_remainder().length())
-				selected_model.global_position = safe_position
+			# Now do movement/collision logic only once, outside the loop
+			var can_move = not selected_model.test_move(selected_model.transform, motion)
 
-				# Show collision feedback in the distance label.
-				distance_label.text = "Stopped by collision"
-				await get_tree().create_timer(1.0).timeout  # Wait for 1 second.
+			# Restore collision layers/masks for friendlies
+			for friendly_unit in friendlies:
+				friendly_unit.set_collision_layer(1)
+				friendly_unit.set_collision_mask(1)
+
+			var final_position = selected_model.global_position + motion
+			var overlap = false
+			if can_move:
+				for other_unit in all_units:
+					if other_unit != selected_model:
+						var their_shape = other_unit.get_node("CollisionShape2D").shape
+						var my_shape = selected_model.get_node("CollisionShape2D").shape
+						var their_pos = other_unit.global_position
+						var my_pos = final_position
+						if my_shape is CircleShape2D and their_shape is CircleShape2D:
+							var dist = my_pos.distance_to(their_pos)
+							if dist < (my_shape.radius + their_shape.radius):
+								overlap = true
+								break
+			if overlap:
+				distance_label.text = "Cannot end move overlapping another unit"
+				await get_tree().create_timer(1.0).timeout
 				if distance_label:
-					distance_label.text = ""  # Clear the label.
+					distance_label.text = ""
 			else:
-				# No collision: move the model to the target position.
-				selected_model.global_position = selected_model.global_position + motion
+				selected_model.global_position = final_position
+				distance_label.text = "Stopped by collision"
+				await get_tree().create_timer(1.0).timeout
+				if distance_label:
+					distance_label.text = ""
 
-			# Hide the preview circle and reset the selected model.
 			preview_circle.visible = false
 			selected_model = null
 			if distance_label:
